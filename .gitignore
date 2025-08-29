@@ -1,0 +1,299 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Cursor IDE
+.cursor/
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+desktop.ini
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Linux
+*~
+
+# API Keys and Secrets
+*.key
+*.pem
+*.p12
+*.pfx
+secrets.json
+config.json
+.secrets/
+credentials.json
+.env.*
+
+# Azure and cloud credentials
+.azure/
+azure.json
+azure-credentials.json
+
+# AI/ML specific files
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.joblib
+*.model
+*.weights
+*.ckpt
+*.pb
+*.onnx
+*.tflite
+*.safetensors
+
+# Model and training directories
+models/
+checkpoints/
+experiments/
+runs/
+logs/
+wandb/
+mlruns/
+.mlflow/
+tensorboard_logs/
+
+# Data directories (uncomment if you want to ignore data)
+# data/
+# datasets/
+# *.csv
+# *.xlsx
+# *.json
+# *.parquet
+# *.feather
+# *.arrow
+
+# Large files
+*.zip
+*.tar.gz
+*.tar.bz2
+*.7z
+*.rar
+*.iso
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Memory and cache directories
+memory/
+cache/
+.cache/
+*.cache
+
+# Output directories
+output/
+outputs/
+results/
+artifacts/
+generated/
+
+# Testing
+.coverage
+.pytest_cache/
+.tox/
+htmlcov/
+coverage.xml
+*.cover
+
+# Documentation build
+docs/_build/
+site/
+
+# Local configuration
+local_config.py
+local_settings.py
+.local/
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Node.js (if using any JS tooling)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Package managers
+uv.lock
+Pipfile.lock
+poetry.lock
+yarn.lock
+package-lock.json
+
+# Project specific
+agents/memory/
+agents/sandbox/
+agents/test/outputs/
+agents/*/output/
+agents/*/outputs/
+
+# Notebook outputs (uncomment to ignore all notebook outputs)
+# *.ipynb
+
+# Operating system files
+.fseventsd
+.DocumentRevisions-V100
+.TemporaryItems
+.apdisk
