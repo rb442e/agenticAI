@@ -10,6 +10,9 @@ from langchain_core.messages import HumanMessage
 import matplotlib
 matplotlib.use('Agg')  # Use non-GUI backend to prevent NSException
 import matplotlib.pyplot as plt
+import streamlit as st
+import os
+from PIL import Image
 
 from dotenv import load_dotenv
 
@@ -48,7 +51,7 @@ def make_system_prompt(suffix: str) -> str:
 tools = [python_repl_tool]
 
 code_generator_agent = create_react_agent(
-    call_model,
+    call_model(),
     tools,
     prompt=make_system_prompt(
         """You are an expert Python code generator and problem solver. Your role is to:
@@ -113,20 +116,23 @@ graph.add_edge("agent_node", END)
 
 graph = graph.compile()
 
-# Safely generate Mermaid diagram
-try:
-    graph.get_graph().draw_mermaid_png(output_file_path="langgraph_diagram7.png")
-    print("Mermaid diagram generated successfully: langgraph_diagram7.png")
-except Exception as e:
-    print(f"Warning: Could not generate Mermaid diagram: {e}")
-    print("Continuing without diagram generation...")
+# # Safely generate Mermaid diagram
+# try:
+#     graph.get_graph().draw_mermaid_png(output_file_path="langgraph_diagram7.png")
+#     print("Mermaid diagram generated successfully: langgraph_diagram7.png")
+# except Exception as e:
+#     print(f"Warning: Could not generate Mermaid diagram: {e}")
+#     print("Continuing without diagram generation...")
 
 
 # invoke the graph
 try:
-    result = graph.invoke({"messages": [HumanMessage(content="Create a line chart showing the top 5 asian countries by population. Get the data from the internet. Save it as a PNG file under folder png_files.")]})
-    print("Graph execution completed successfully!")
-    print("Final result: ", result["messages"][-1].content)
+    question = st.text_input("Enter your query")
+    result = graph.invoke({"messages": [HumanMessage(content= question)]})
+    st.markdown(result["messages"][-1].content)
+
+    # print("Graph execution completed successfully!")
+    # print("Final result: ", result["messages"][-1].content)
 except Exception as e:
     print(f"Error during graph execution: {e}")
     print("This might be due to API issues, network problems, or other runtime errors.")
